@@ -34,19 +34,26 @@ class Map {
 				}
 			}
 		}
+		return this;
+	}
+
+	set(x, y, color) {
+		if (this.data[y] && this.data[y][x]) {
+			for (let i in color) {
+				this.data[y][x][i] = color[i];
+			}
+		}
+		return this;
 	}
 
 	fill(y, x, color, oY = 1, oX) {
 		oX = oX || oY;
 		for (let y1 = 0; y1 < oY; y1++) {
 			for (let x1 = 0; x1 < oX; x1++) {
-				if (this.data[y + y1] && this.data[y + y1][x + x1]) {
-					for (let i in color) {
-						this.data[y + y1][x + x1][i] = color[i];
-					}
-				}
+				this.set(y + y1, x + x1, color);
 			}
 		}
+		return this;
 	}
 
 	toBuffer() {
