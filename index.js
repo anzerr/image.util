@@ -37,7 +37,7 @@ class Map {
 		return this;
 	}
 
-	set(x, y, color) {
+	set(y, x, color) {
 		if (this.data[y] && this.data[y][x]) {
 			for (let i in color) {
 				this.data[y][x][i] = color[i];
