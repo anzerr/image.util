@@ -1,4 +1,7 @@
 
+const Line = require('./src/line.js'),
+	Text = require('./src/text.js');
+
 class Map {
 
 	constructor(option) {
@@ -17,6 +20,13 @@ class Map {
 				}
 			}
 		}
+		this.line = new Line(this);
+		this.text = {};
+	}
+
+	addFont(key, font) {
+		this.text[key] = new Text(this, font);
+		return this.text[key].load();
 	}
 
 	load(data) {

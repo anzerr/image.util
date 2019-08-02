@@ -1,25 +1,12 @@
 
-### `Intro`
-Interface to interact with a RGB object instead of a buffer. Small tool set to draw lines, text and blocks.
-
-#### `Install`
-``` bash
-npm install --save git+ssh://git@github.com/anzerr/image.util.git
-```
-
-### `Example`
-``` javascript
-const bmp = require('bmp.util'),
-	Map = require('image.util'),
+const Map = require('../index.js'),
+	bmp = require('bmp.util'),
 	fs = require('fs.promisify');
 
-let data = fs.readFileSync('image.bmp'), decode = bmp.decode(data);
 const map = new Map({
-	width: decode.width,
-	height: decode.height,
-	channel: decode.channel, // 4
-	mask: {r: 3, g: 2, b: 1, a: 0},
-	data: decode.data
+	width: 500,
+	height: 500,
+	mask: {r: 3, g: 2, b: 1, a: 0}
 });
 
 const COLOR = {
@@ -37,11 +24,10 @@ map.addFont('cherry', './node_modules/bdf.util/test/cherry-10-b.bdf').then(() =>
 	map.line.draw(200, 0, 500, 500, COLOR.RED, 2);
 	map.line.draw(500, 0, 0, 500, COLOR.BLUE, 3);
 }).then(() => {
-	return fs.writeFile('copy.bmp', bmp.encode({
+	return fs.writeFile('./test/example.bmp', bmp.encode({
 		width: map.width,
 		height: map.height,
 		endian: true,
 		data: map.toBuffer()
 	}).data);
 }).catch(console.log);
-```
