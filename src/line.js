@@ -30,8 +30,9 @@ class Line {
 	}
 
 	draw(x0, y0, x1, y1, color, width = 1) {
+		let h = Math.floor(width / 2);
 		this.generate(x0, y0, x1, y1, (x, y) => {
-			return (width === 1) ? this.map.set(x, y, color) : this.map.fill(x, y, color, width);
+			return (width === 1) ? this.map.set(x, y, color) : this.map.fill(x - h, y - h, color, width);
 		});
 	}
 
