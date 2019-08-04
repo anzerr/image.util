@@ -23,14 +23,14 @@ declare interface Option {
 declare class Text {
 	constructor(map: any, font: string);
 	load(): Promise<any> | any;
-	drawChar(char: number, x: number, y: number, size: number, color: Color);
-	draw(text: string, x: number, y: number, size?: number, color?: Color);
+	drawChar(char: number, x: number, y: number, size: number, color: Color): number;
+	draw(text: string, x: number, y: number, size?: number, color?: Color): [number, number];
 }
 
 declare class Line {
 	constructor(map: any);
-	generate(x0: number, y0: number, x1: number, y1: number, cd: (x: number, y: number) => any);
-	draw(x0: number, y0: number, x1: number, y1: number, color: Color, width?: number);
+	generate(x0: number, y0: number, x1: number, y1: number, cd: (x: number, y: number) => any): void;
+	draw(x0: number, y0: number, x1: number, y1: number, color: Color, width?: number): void;
 }
 
 declare interface FontMap {
