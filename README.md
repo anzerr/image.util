@@ -4,7 +4,7 @@ Interface to interact with a RGB object instead of a buffer. Small tool set to d
 
 #### `Install`
 ``` bash
-npm install --save git+ssh://git@github.com/anzerr/image.util.git
+npm install --save git+https://github.com/anzerr/image.util.git
 ```
 
 ### `Example`

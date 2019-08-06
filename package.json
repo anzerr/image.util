@@ -21,7 +21,6 @@
 		"extends": "eslint-config-basic"
 	},
 	"devDependencies": {
-		"eslint": "5.11.1",
 		"fs.promisify": "git+https://git@github.com/anzerr/fs.promisify.git",
 		"bmp.util": "git+ssh://git@github.com/anzerr/bmp.util.git",
 		"eslint-config-basic": "git+https://git@github.com/anzerr/eslintrc.git"
