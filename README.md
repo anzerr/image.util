@@ -1,5 +1,7 @@
 
 ### `Intro`
+![GitHub Actions status | publish](https://github.com/anzerr/image.util/workflows/publish/badge.svg)
+
 Interface to interact with a RGB object instead of a buffer. Small tool set to draw lines, text and blocks.
 
 #### `Install`

@@ -1,7 +1,15 @@
 {
 	"name": "image.util",
 	"version": "1.0.11",
-	"keywords": [],
+	"description": "image buffer to rgb interface",
+	"keywords": [
+		"bitmap",
+		"buffer",
+		"image",
+		"nodejs",
+		"rgb",
+		"util"
+	],
 	"homepage": "https://github.com/anzerr/image.util#readme",
 	"bugs": {
 		"url": "https://github.com/anzerr/image.util/issues"
@@ -20,6 +28,9 @@
 	"eslintConfig": {
 		"extends": "eslint-config-basic"
 	},
+	"dependencies": {
+		"bdf.util": "git+https://git@github.com/anzerr/bdf.util.git"
+	},
 	"devDependencies": {
 		"fs.promisify": "git+https://git@github.com/anzerr/fs.promisify.git",
 		"bmp.util": "git+ssh://git@github.com/anzerr/bmp.util.git",
@@ -27,8 +38,5 @@
 	},
 	"engines": {
 		"node": ">= 0.10.0"
-	},
-	"dependencies": {
-		"bdf.util": "git+https://git@github.com/anzerr/bdf.util.git"
 	}
 }
