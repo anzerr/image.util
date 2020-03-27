@@ -1,6 +1,6 @@
 {
 	"name": "image.util",
-	"version": "1.0.12",
+	"version": "1.0.13",
 	"description": "image buffer to rgb interface",
 	"keywords": [
 		"bitmap",
